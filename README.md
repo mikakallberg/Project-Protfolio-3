@@ -1,6 +1,7 @@
 # Build a Bear
 
 # Navigation Through Content
+* [Deployed page]()<---- link to deployed app goes here
 * [Initial Planning](#initial-planning)
     - [Lucid Chart](#lucid-chart)
     - [Code Plan](#code-plan)
@@ -20,7 +21,18 @@
     - [Content](#content)
     - [Media](#media)
 
-
+# Project purpose
+## Learning Outcomes
+Taken from Assessment Handbook provided by Code Institute.
+- Implement a given algorithm as a computer program ([Study.com](https://study.com/academy/lesson/what-is-an-algorithm-in-programming-definition-examples-analysis.html))
+- Adapt and combine algorithms to solve a given problem
+- Adequately use standard programming constructs: repitition, selection, functions, composition, modules, aggregated data (arrays, lists, etc.)
+- Explain what given program does
+- Indentify and repair coding errors in program
+- Use library software for building a garphical user interface, or command-line interface, or web application, or mathematical softaware
+- implement a data model, application features and business logic to manage, query and manipulate data to meet given needs in a particular real-world domain
+- Demonstrate and document the development process through a version control system such as GitHub
+- Deploy a command-line application to a cloud-based platform ([Buil a Bear]())<----- don't forget to put in link
 # Initial planning
 ### Project requirements
 ### Lucid Chart
