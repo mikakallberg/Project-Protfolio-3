@@ -112,6 +112,8 @@ Initial Plan page 1.                                 | Initial Plan page 2
 ### Unfixed bugs
 
 ## Deployment
+### Checklist:
+Put picture of checklist here when done.
 
 # Credits
 
