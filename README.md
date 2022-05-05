@@ -2,6 +2,9 @@
 
 # Navigation Through Content
 * [Deployed page]()<---- link to deployed app goes here
+* [Project Purpose](#project-purpose)
+    - [Learning Outcomes](#learning-outcomes)
+    - [Project Requirements](#project-requirements)
 * [Initial Planning](#initial-planning)
     - [Lucid Chart](#lucid-chart)
     - [Code Plan](#code-plan)
@@ -21,7 +24,7 @@
     - [Content](#content)
     - [Media](#media)
 
-# Project purpose
+# Project Purpose
 ## Learning Outcomes
 Taken from Assessment Handbook provided by Code Institute.
 - Implement a given algorithm as a computer program ([Study.com](https://study.com/academy/lesson/what-is-an-algorithm-in-programming-definition-examples-analysis.html))
@@ -29,10 +32,18 @@ Taken from Assessment Handbook provided by Code Institute.
 - Adequately use standard programming constructs: repitition, selection, functions, composition, modules, aggregated data (arrays, lists, etc.)
 - Explain what given program does
 - Indentify and repair coding errors in program
-- Use library software for building a garphical user interface, or command-line interface, or web application, or mathematical softaware
+- Use library software for building a graphical user interface, or command-line interface, or web application, or mathematical softaware
 - implement a data model, application features and business logic to manage, query and manipulate data to meet given needs in a particular real-world domain
 - Demonstrate and document the development process through a version control system such as GitHub
 - Deploy a command-line application to a cloud-based platform ([Buil a Bear]())<----- don't forget to put in link
+
+### Project requirements
+Taken from Assessment Handbook provided by Code Institute or derived therefrom.
+- Required langauge: [Python](https://www.python.org/doc/essays/blurb/) 
+- Using APIs and library software [Wikipedia](https://en.wikipedia.org/wiki/API)
+- Deploy to a cloud-based platform [Heroku](https://www.heroku.com/home)
+
+
 # Initial planning
 ### History of the Hang Man Game
 [Hangman(game) Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game))
@@ -40,7 +51,7 @@ Taken from Assessment Handbook provided by Code Institute.
 - The outside of prgramming history of Hangman wasa little bit easier to find. According to Wikipedia the origins ar unknown, but a variant of the game is mentioned in a book of children's games from 1894 assembled by Alice Gomme, the book is called "Birds, Beasts, and Fishes". Please feel free to read the article in the link provided above for more information.
 - [References](#media)
 
-### Project requirements
+
 ### Lucid Chart
 
 ![Lucid Chart](assets/images/lucidcart_build-a-bear.png)
