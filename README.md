@@ -1,31 +1,76 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Build a Bear
 
-Welcome USER_NAME,
+# Navigation Through Content
+* [Initial Planning](#initial-planning)
+    - [Lucid Chart](#lucid-chart)
+    - [Code Plan](#code-plan)
+    - [Media for Inspiration](#media-for-inspiration)
+* [Features](#features)
+	- [Existing Features](#existing-features)
+    - [Features left to implement](#features-left-to-implement)
+* [Testing](#testing)
+    - [Validator testing](#validator-testing)
+    - [Other testing done](#other-testing-done)
+* [Bugs](#bugs)
+    - [Bugs through the  creation process](#bugs-through-the-creation-process)
+    - [Unfixed bugs](#unfixed-bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
+    - [Mentoring](#mentoring)
+    - [Content](#content)
+    - [Media](#media)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
+# Initial planning
+### Project requirements
+### Lucid Chart
+### Code Plan
+### Media for inspiration
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+# User Experience (UX)
+## Demographics
+## User Goal
 
-## Creating the Heroku app
+# Game Content
+## Features
+### Existing features
+- 
+- 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Features left to implement
 
-1. `heroku/python`
-2. `heroku/nodejs`
+# Technologies and Libraries used
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Languages used
+- [Python](https://www.python.org/doc/essays/blurb/) 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+    Initial file provided by Code Institute. Unique code written by author.
 
-Connect your GitHub repository and deploy as normal.
+- [HTML](https://www.w3schools.com/html/html_intro.asp)
 
-## Constraints
+    File provided in it's entirity by Code Institute.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- [CSS](https://www.w3schools.com/css/css_intro.asp)
 
------
-Happy coding!
+    File provided in it's entirity by Code Institute.
+
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+
+    File provided in it's entirity by Code Institute.
+
+
+# Testing
+### Validator testing
+### Other testing done
+## Bugs
+### Bugs through the creation process
+### Unfixed bugs
+
+## Deployment
+
+# Credits
+
+### Content
+### Media
+- For how to make the nav-bar https://github.com/artkonekt/menu/blob/master/README.md was used.
+- As template for README https://github.com/mikakallberg/readme-template/blob/master/README.md was used
