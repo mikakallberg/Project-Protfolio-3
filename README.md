@@ -64,6 +64,13 @@ Initial Plan page 1.                                 | Initial Plan page 2
 
 
 ### Media for inspiration
+- [CBT Nuggets](https://www.youtube.com/watch?v=JNXmCOumNw0)
+- [Level Up Coding](https://levelup.gitconnected.com/python-can-be-lots-of-fun-999552d69d21)
+- [The Python Programmer](https://www.youtube.com/watch?v=xS_EaSD_WGA)
+- [Welcome to dinosay](https://matteoguadrini.github.io/dinosay/)
+- [ASCII Art Archive](https://www.asciiart.eu/animals/bears)
+- [The Grimes Teacher](https://www.youtube.com/watch?v=arcFqEuV_XQ)
+
 
 # User Experience (UX)
 ## Demographics
