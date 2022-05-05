@@ -57,6 +57,12 @@ Taken from Assessment Handbook provided by Code Institute or derived therefrom.
 ![Lucid Chart](assets/images/lucidcart_build-a-bear.png)
 
 ### Code Plan
+The text in these pictures are a mix of English and Swedish. As these are written out for me to understand and guide me.
+Initial Plan page 1.                                 | Initial Plan page 2
+:--------------------------------------------------: | :--------------------------------------------------:
+![Initial Plan 1](assets/images/initial-plan-1.png)  | ![Initial Plan 2](assets/images/initial-plan-2.png)
+
+
 ### Media for inspiration
 
 # User Experience (UX)
