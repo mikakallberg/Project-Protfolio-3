@@ -34,6 +34,12 @@ Taken from Assessment Handbook provided by Code Institute.
 - Demonstrate and document the development process through a version control system such as GitHub
 - Deploy a command-line application to a cloud-based platform ([Buil a Bear]())<----- don't forget to put in link
 # Initial planning
+### History of the Hang Man Game
+[Hangman(game) Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game))
+- I was not able to finding who first started using the hangman game in a programming langauge. But in every resource checked it was reffered to as a classic.
+- The outside of prgramming history of Hangman wasa little bit easier to find. According to Wikipedia the origins ar unknown, but a variant of the game is mentioned in a book of children's games from 1894 assembled by Alice Gomme, the book is called "Birds, Beasts, and Fishes". Please feel free to read the article in the link provided above for more information.
+- [References](#media)
+
 ### Project requirements
 ### Lucid Chart
 ### Code Plan
@@ -87,3 +93,7 @@ Taken from Assessment Handbook provided by Code Institute.
 - For how to make the nav-bar https://github.com/artkonekt/menu/blob/master/README.md was used.
 - As template for README https://github.com/mikakallberg/readme-template/blob/master/README.md was used
 - Also fellow student Mats Simonsson README from his Project Portfolio 3 [Pelikantapeten](https://github.com/Pelikantapeten/p3-dad-jokes/blob/main/README.md) was used as inspiration.
+- For the history of Hangman game
+     - [ActionScript 3.0 Game Programming](https://books.google.se/books?id=xui0oBqe2l0C&pg=PT424&lpg=PT424&dq=what+is+the+history+of+the+hangman+game+in+programming&source=bl&ots=r3AcRahYBd&sig=ACfU3U0O_2N46037_Xf4iTNgqaeUaWmyRA&hl=sv&sa=X&ved=2ahUKEwitttPI_cf3AhWSmIsKHWcJCVQQ6AF6BAgpEAM#v=onepage&q=what%20is%20the%20history%20of%20the%20hangman%20game%20in%20programming&f=false)
+     - [CBT Nuggets](https://www.youtube.com/watch?v=JNXmCOumNw0)
+     - [iCode](https://icodemag.com/creating-a-simple-hangman-game-in-python/)
