@@ -57,7 +57,7 @@ Taken from Assessment Handbook provided by Code Institute or derived therefrom.
 ![Lucid Chart](assets/images/lucidcart_build-a-bear.png)
 
 ### Code Plan
-The text in these pictures are a mix of English and Swedish. As these are written out for me to understand and guide me.
+The text in these pictures are a mix of English and Swedish. As these are written out for me to understand and guide me. Resource used to place pictures side by side see [Media](#media)
 Initial Plan page 1.                                 | Initial Plan page 2
 :--------------------------------------------------: | :--------------------------------------------------:
 ![Initial Plan 1](assets/images/initial-plan-1.png)  | ![Initial Plan 2](assets/images/initial-plan-2.png)
@@ -117,3 +117,4 @@ Initial Plan page 1.                                 | Initial Plan page 2
      - [ActionScript 3.0 Game Programming](https://books.google.se/books?id=xui0oBqe2l0C&pg=PT424&lpg=PT424&dq=what+is+the+history+of+the+hangman+game+in+programming&source=bl&ots=r3AcRahYBd&sig=ACfU3U0O_2N46037_Xf4iTNgqaeUaWmyRA&hl=sv&sa=X&ved=2ahUKEwitttPI_cf3AhWSmIsKHWcJCVQQ6AF6BAgpEAM#v=onepage&q=what%20is%20the%20history%20of%20the%20hangman%20game%20in%20programming&f=false)
      - [CBT Nuggets](https://www.youtube.com/watch?v=JNXmCOumNw0)
      - [iCode](https://icodemag.com/creating-a-simple-hangman-game-in-python/)
+- For how to put pictures next to one another [EpicDavi and Prince](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md)
