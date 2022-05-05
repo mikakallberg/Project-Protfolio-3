@@ -42,6 +42,9 @@ Taken from Assessment Handbook provided by Code Institute.
 
 ### Project requirements
 ### Lucid Chart
+
+![Lucid Chart](assets/images/lucidcart_build-a-bear.png)
+
 ### Code Plan
 ### Media for inspiration
 
