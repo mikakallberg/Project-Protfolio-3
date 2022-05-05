@@ -6,5 +6,13 @@ tprint('mikaela')
 
 randomword = ['furthermore', 'copying', 'periodic', 'mental']
 
+def pick_random_word(randomword):
+    """
+    This function selects a random word from source
+    """
+    word_in_play = random.choice(randomword)
+    print(word_in_play)
 
-print(random.choice(randomword))
+pick_random_word(randomword)
+
+
