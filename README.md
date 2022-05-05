@@ -107,8 +107,13 @@ Initial Plan page 1.                                 | Initial Plan page 2
 # Testing
 ### Validator testing
 ### Other testing done
+- Continual testing done through the TDD method described in "The Clean Coder- A Code of Conduct for Professional Programmers" by Robert C. Martin
+![TDD Testing example](assets/images/tdd_testing_nr1.png)
 ## Bugs
 ### Bugs through the creation process
+- First bug showed it's lovely little head at the first function. Had both ValueError and TypeError. The problem was related to calling import random. I tried scaling my code back to the raw basic. Fixed by following https://www.w3schools.com/python/ref_random_choice.asp and discussing it with my mentor.
+
+
 ### Unfixed bugs
 
 # Deployment
