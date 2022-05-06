@@ -21,9 +21,9 @@ def pick_random_word(randomword):
     """
     if start_game == 'y':
         word_in_play = random.choice(randomword)
-        max_turns = len(word_in_play)
+        max_turns = (len(word_in_play)+2)
         print(word_in_play)
-        print(max_turns)
+        print(f'You have {max_turns} guesses for this word!')
 
 
 pick_random_word(randomword)
