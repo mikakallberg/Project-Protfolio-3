@@ -124,7 +124,7 @@ Put picture of checklist here when done.
 # Credits
 
 ### Content
-- start_game variable was heavely inspired by code from https://icodemag.com/creating-a-simple-hangman-game-in-python/
+- start_game variable was heavely inspired by code from https://www.codegrepper.com/code-examples/python/how+to+make+a+yes+or+no+question+in+python
 ### Media
 - For how to make the nav-bar https://github.com/artkonekt/menu/blob/master/README.md was used.
 - As template for README https://github.com/mikakallberg/readme-template/blob/master/README.md was used
