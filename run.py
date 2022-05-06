@@ -5,6 +5,7 @@ from art import *
 tprint('mikaela')
 
 randomword = ['furthermore', 'copying', 'periodic', 'mental']
+lettersGuessed = ""
 
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to 
@@ -32,7 +33,15 @@ def pick_random_word(randomword):
         print(word_in_play)
         print(f'You have {max_turns} guesses for this word!')
 
+    while max_turns > 0:
+        guess = input('Please enter a letter: ')
+        if guess in word_in_play:
+            print(f'{guess} is in the random word')
+            break
+        else:
+            print(f'{guess} was incorrect')
+            break
+
 
 pick_random_word(randomword)
-
 
