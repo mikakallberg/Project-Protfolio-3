@@ -4,8 +4,9 @@ from art import *
 
 tprint('mikaela')
 
-randomword = ['furthermore', 'copying', 'periodic', 'mental']
-lettersGuessed = ""
+whateverword = ['furthermore', 'copying', 'periodic', 'mental']
+
+letters_guessed = ""
 
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to 
@@ -27,22 +28,34 @@ def pick_random_word(randomword):
     This function selects a random word from source
     and generates the number of guesses a user has
     """
+    word_in_play = random.choice(randomword)
     if start_game == 'y':
-        word_in_play = random.choice(randomword)
-        max_turns = (len(word_in_play)+2)
         print(word_in_play)
-        print(f'You have {max_turns} guesses for this word!')
+    return word_in_play
 
-    while max_turns > 0:
+
+def calculate_max_turns(word):
+    print(word)
+    max_turns = (len(word)+2)
+    print(f'You have {max_turns} guesses for this word!')
+    
+    return max_turns
+
+
+def loop_letters(lives_left, word_in_play):
+    while lives_left > 0:
         guess = input('Please enter a letter: ')
         if guess in word_in_play:
             print(f'{guess} is in the random word')
             break
         else:
-            max_turns -= 1
-            print(f'{guess} was incorrect. You have {max_turns} attempts left.')
+            lives_left -= 1
+            print(f'{guess} was incorrect. You have {lives_left} attempts left.')
             break
 
 
-pick_random_word(randomword)
+generated_word = pick_random_word(whateverword)
+print(generated_word)
+number_of_lives_left = calculate_max_turns(generated_word)
+loop_letters(number_of_lives_left, generated_word)
 
