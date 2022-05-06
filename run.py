@@ -39,7 +39,8 @@ def pick_random_word(randomword):
             print(f'{guess} is in the random word')
             break
         else:
-            print(f'{guess} was incorrect')
+            max_turns -= 1
+            print(f'{guess} was incorrect. You have {max_turns} attempts left.')
             break
 
 
