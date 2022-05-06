@@ -113,6 +113,7 @@ Initial Plan page 1.                                 | Initial Plan page 2
 ### Bugs through the creation process
 - First bug showed it's lovely little head at the first function. Had both ValueError and TypeError. The problem was related to calling import random. I tried scaling my code back to the raw basic. Fixed by following https://www.w3schools.com/python/ref_random_choice.asp and discussing it with my mentor.
 
+- A bug in the pick_random_word function, counted the number of objects in a list, not the umber of letters in the word. I had put randomword instead of word_at_play in the len() method. 
 
 ### Unfixed bugs
 
@@ -123,6 +124,7 @@ Put picture of checklist here when done.
 # Credits
 
 ### Content
+- start_game variable was heavely inspired by code from https://icodemag.com/creating-a-simple-hangman-game-in-python/
 ### Media
 - For how to make the nav-bar https://github.com/artkonekt/menu/blob/master/README.md was used.
 - As template for README https://github.com/mikakallberg/readme-template/blob/master/README.md was used

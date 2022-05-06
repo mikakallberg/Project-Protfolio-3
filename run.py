@@ -7,6 +7,8 @@ tprint('mikaela')
 randomword = ['furthermore', 'copying', 'periodic', 'mental']
 
 #This variabel lets user initiate the game
+#Credit for code structure (not a complete copy paste) to 
+# https://icodemag.com/creating-a-simple-hangman-game-in-python/
 start_game = input('Do you wish to start? Press y for yes or n for no: ')
 if start_game == ('y'):
     print('game starting')
