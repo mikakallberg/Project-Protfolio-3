@@ -12,15 +12,14 @@ if start_game == ('y'):
 elif start_game == ('n'):
     print('break statement')
 
-start_game()
-
 
 def pick_random_word(randomword):
     """
     This function selects a random word from source
     """
-    word_in_play = random.choice(randomword)
-    print(word_in_play)
+    if start_game == 'y':
+        word_in_play = random.choice(randomword)
+        print(word_in_play)
 
 
 pick_random_word(randomword)
