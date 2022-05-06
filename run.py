@@ -9,11 +9,16 @@ randomword = ['furthermore', 'copying', 'periodic', 'mental']
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to 
 # Code Grepper, please see README for link.
+print('This is a hangman type game.')
+print('The computer will generate a random word.')
+print('The number of times you have to guess the letters of that word,')
+print('depends on the number of letters in that random word.')
+print('You get 2 extra attempts with each word.')
 start_game = input('Do you wish to start? Press y for yes or n for no: ')
 if start_game == ('y'):
-    print('game starting')
+    print('Lets build a bear!')
 elif start_game == ('n'):
-    print('break statement')
+    print('Okey, have a nice day!')
 
 
 def pick_random_word(randomword):
