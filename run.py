@@ -25,8 +25,7 @@ elif start_game == ('n'):
 
 def pick_random_word(randomword):
     """
-    This function selects a random word from source
-    and generates the number of guesses a user has
+    Selects a random word from source
     """
     word_in_play = random.choice(randomword)
     if start_game == 'y':
@@ -35,6 +34,9 @@ def pick_random_word(randomword):
 
 
 def calculate_max_turns(word):
+    """
+    Calculates number turns
+    """
     print(word)
     max_turns = (len(word)+2)
     print(f'You have {max_turns} guesses for this word!')
@@ -43,6 +45,10 @@ def calculate_max_turns(word):
 
 
 def loop_letters(lives_left, word_in_play):
+    """
+    Looping through the word
+    according to the number of lives left
+    """
     while lives_left > 0:
         guess = input('Please enter a letter: ')
         if guess in word_in_play:
