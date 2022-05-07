@@ -16,32 +16,23 @@ print('The computer will generate a random word.')
 print('The number of times you have to guess the letters of that word,')
 print('depends on the number of letters in that random word.')
 print('You get 2 extra attempts with each word.')
-start_game = input('Do you wish to start? Press y for yes or n for no: ')
-"""
-if start_game == ('y'):
-    print('Lets build a bear!')
-elif start_game == ('n'):
-    print('Okey, have a nice day!')
-"""
+user_input = input('Do you wish to start? Press y for yes or n for no: \n')
 
-def validate_input_start(input_correct):
+
+def start_game(value_input):
     """
-    Checkes to see if input from user is y or n
+    check if input is y or n
     """
-    user_input = start_game
-    try: 
-        if user_input == ('y'):
-            print('Lets build a bear!')
-        elif user_input == ('n'):
-            print('Okey, have a nice day!')
-        if user_input != ('y') or ('n'):
-            raise ValueError(
-                f'You inserted an incorrect value, please try again'
-            )
-            return False
-        return True
-
-
+    value_input = user_input
+    while True:
+        try:
+            value_input == ('y') or value_input == ('n')
+        except ValueError as e:
+            print(f'{e} is not correct, please try again\n')
+            continue
+        else:
+            break
+    return value_input
 
 
 def pick_random_word(randomword):
@@ -49,7 +40,7 @@ def pick_random_word(randomword):
     Selects a random word from source
     """
     word_in_play = random.choice(randomword)
-    if start_game == 'y':
+    if start_game_command == 'y':
         print(word_in_play)
     return word_in_play
 
@@ -60,7 +51,7 @@ def calculate_max_turns(word):
     """
     print(word)
     max_turns = (len(word)+2)
-    print(f'You have {max_turns} guesses for this word!')
+    print(f'You have {max_turns} guesses for this word!\n')
     return max_turns
 
 
@@ -76,10 +67,11 @@ def loop_letters(lives_left, word_in_play):
             break
         else:
             lives_left -= 1
-            print(f'{guess} was incorrect. You have {lives_left} attempts left.')
+            print(f'{guess} is incorrect. You have {lives_left} attempts left')
             break
 
-validation = validate_input_start(x)
+
+start_game_command = start_game(user_input)
 generated_word = pick_random_word(whateverword)
 print(generated_word)
 number_of_lives_left = calculate_max_turns(generated_word)
