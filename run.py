@@ -36,14 +36,12 @@ def pick_random_word(randomword):
     Selects a random word from source
     """
     word_in_play = random.choice(randomword)
-    if start_game_command == 'y':
-        print(word_in_play)
     return word_in_play
 
 
 def calculate_max_turns(word):
     """
-    Calculates number turns
+    Calculates number of turns
     """
     max_turns = (len(word)+2)
     print(f'You have {max_turns} guesses for this word!\n')
