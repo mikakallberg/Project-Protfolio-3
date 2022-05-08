@@ -37,7 +37,6 @@ def pick_random_word(randomword):
     Selects a random word from source
     """
     word_in_play = random.choice(randomword)
-    
     return word_in_play
 
 
@@ -139,5 +138,3 @@ while True:
             number_of_lives_left = calculate_max_turns(secret_word)
         else:
             exit()
-
-            
