@@ -6,7 +6,6 @@ tprint('mikaela')
 
 whateverword = ['furthermore', 'copying', 'periodic', 'mental']
 
-
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to
 # Code Grepper, please see README for link.
@@ -46,7 +45,6 @@ def calculate_max_turns(word):
     """
     Calculates number turns
     """
-    print(word)
     max_turns = (len(word)+2)
     print(f'You have {max_turns} guesses for this word!\n')
     return max_turns
@@ -70,9 +68,9 @@ def loop_letters(lives_left, word_in_play):
         letters_guessed = ""
         letters_guessed = letters_guessed + guess
 
-        for guess in word_in_play:
-            if guess in word_in_play:
-                print(f'{guess}', end='')
+        for letter in word_in_play:
+            if letter in word_in_play:
+                print(f'{letter}', end='')
             else:
                 print('_', end='')
                 lives_left += 1
