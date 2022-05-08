@@ -28,7 +28,7 @@ def start_game():
             print('Okey, have a nice day!\n')
         else:
             print(f'{user_input} is not correct, please try again\n')
-    return user_input
+    return 
 
 
 def pick_random_word(randomword):
