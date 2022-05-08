@@ -28,7 +28,7 @@ def start_game():
             print('Okey, have a nice day!\n')
         else:
             print(f'{user_input} is not correct, please try again\n')
-    return 
+    return
 
 
 def pick_random_word(randomword):
@@ -46,6 +46,26 @@ def calculate_max_turns(word):
     max_turns = (len(word)+2)
     print(f'You have {max_turns} guesses for this word!\n')
     return max_turns
+
+
+def get_guess(already_guessed):
+    """
+    Validation of user input
+    If letter has already been used,
+    multipel letters
+    or not a letter
+    ask fo correct input
+    """
+    while True:
+        guess = input('Please enter a letter: ').strip().lower()
+        if len(guess) != 1:
+            print('Please enter a single letter!')
+        elif guess in already_guessed:
+            print(f'You have already used {guess}!')
+        elif guess not in 'abcdefghijklmnopqrstuvxyz':
+            print('Please enter a letter')
+        else:
+            return guess
 
 
 def loop_letters(lives_left, word_in_play):
@@ -84,7 +104,9 @@ def loop_letters(lives_left, word_in_play):
         print(f"Unfortnuately you didn't guess the correct letters of the word {word_in_play}")
 
 
-start_game_command = start_game()
+start_game()
+missed_letters = ''
+correct_letters = ''
 generated_word = pick_random_word(whateverword)
 number_of_lives_left = calculate_max_turns(generated_word)
 loop_letters(number_of_lives_left, generated_word)
