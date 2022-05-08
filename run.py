@@ -51,60 +51,93 @@ def calculate_max_turns(word):
 
 
 def display_board(missed_letters, correct_letters, secret_word):
-    print('Missed letters: ', end='')
+    print('Missed letters: ', end=' ')
     for letter in missed_letters:
-        print(letter, end='')
+        print(letter, end=' ')
         print()
     
-    letters_guessed = ""
-    letters_guessed += guess
-    num = len(word_in_play)
+    num = '_' * len(secret_word)
 
     for guess in range(0, num):
-        print(word_in_play, guess)
-        if word_in_play[guess] == word_in_play:
-            print(word_in_play[guess], end='')
-        elif word_in_play[guess] == '':
+        if secret_word[guess] in correct_letters:
+            print(secret_word[guess], end=' ')
+        elif secret_word[guess] == '':
             print('', end='')
         else:
-            print('_', end='')
+            print('_', end=' ')
     print('')
 
 
-def loop_letters(lives_left, word_in_play, already_guessed):
+def loop_letters(lives_left, word_in_play):
     """
     Looping through the word
     according to the number of lives left.
     When lives_left == 0 or all letters are
     found the loop will break
     """
+    guess = secret_word
+    letters_guessed = ""
+    letters_guessed += guess
+
     while lives_left > 0:
         input('Please enter a letter: ')
         guess = input().strip().lower()
         if len(guess) != 1:
             print('You only have to guess one letter!')
-        elif guess in already_guessed:
+        elif guess in letters_guessed:
             print(f'You have already used {guess}!')
         elif guess not in 'abcdefghijklmnopqrstuvwxyz':
             print('Please enter a value that is a letter')
         elif guess in word_in_play:
             print(f'{guess} is in the random word')
+            return guess
         else:
             lives_left -= 1
             print(f'{guess} is incorrect. You have {lives_left} attempts left')
 
-        if letters_guessed == word_in_play:
-            print('Congratulations!')
-            print(f'You guessed all the letters of the word {word_in_play}!')
-            break
-    else:
-        print("Unfortnuately you didn't")
-        print(f'guess the correct letters of the word {word_in_play}')
-
 
 start_game()
 game_is_finished = False
+missed_letters = ''
+correct_letters = ''
 secret_word = pick_random_word(whateverword)
 number_of_lives_left = calculate_max_turns(secret_word)
-loop_letters(number_of_lives_left, secret_word, letters_guessed)
+loop_letters(number_of_lives_left, secret_word)
 
+while True:
+    display_board(missed_letters, correct_letters, secret_word)
+
+    guess = loop_letters(missed_letters + correct_letters)
+
+    if guess in secret_word:
+        correct_letters += guess
+        found_all_letters = True
+        for i in range(len(secret_word)):
+            if secret_word[i] not in correct_letters:
+                found_all_letters = False
+                break
+        if found_all_letters:
+            print('Congratulations you guessed all the letters')
+            print(f'of the word {secret_word}!')
+            game_is_finished = True
+    else:
+        missed_letters += guess
+        if len(missed_letters) == number_of_lives_left:
+            display_board(missed_letters, correct_letters, secret_word)
+            print("Unfortnuately you didn't guess the correct")
+            print('letters in the word.')
+            print(f'The word was {secret_word}')
+            game_is_finished = True
+
+    if game_is_finished:
+        if start_game():
+            start_game()
+            missed_letters = ''
+            correct_letters = ''
+            game_is_finished = False
+            secret_word = pick_random_word(whateverword)
+            number_of_lives_left = calculate_max_turns(secret_word)
+        else:
+            exit()
+
+            
