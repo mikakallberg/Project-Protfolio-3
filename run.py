@@ -67,13 +67,16 @@ def loop_letters(lives_left, word_in_play):
 
         letters_guessed = ""
         letters_guessed = letters_guessed + guess
+        num = len(word_in_play)
 
-        for letter in word_in_play:
-            if letter in word_in_play:
-                print(f'{letter}', end='')
+        for guess in range(0, num):
+            print(word_in_play, guess)
+            if word_in_play[guess] == word_in_play:
+                print(word_in_play[guess], end='')
+            elif word_in_play[guess] == '':
+                print('', end='')
             else:
                 print('_', end='')
-                lives_left += 1
         print('')
 
         if letters_guessed == word_in_play:
