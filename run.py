@@ -21,7 +21,8 @@ def start_game():
     check if input is y or n
     """
     while True:
-        user_input = input('Do you wish to start? Press y for yes or n for no: ')
+        print('Do you wish to start?')
+        user_input = input('Press y for yes or n for no: ')
         if user_input == ('y'):
             break
         elif user_input == ('n'):
@@ -35,8 +36,7 @@ def pick_random_word(randomword):
     """
     Selects a random word from source
     """
-    word_in_play = random.choice(randomword)
-    return word_in_play
+    return random.choice(randomword)
 
 
 def calculate_max_turns(word):
@@ -48,6 +48,25 @@ def calculate_max_turns(word):
     return max_turns
 
 
+def board_display(missed_letters, correct_letters, secret_word):
+    """
+    Display letters on game display
+    """
+    print('Wrong letters entered: ', end='')
+    for letter in missed_letters:
+        print(letter, end=' ')
+    print()
+
+    blanks = '_' * len(secret_word)
+
+    for i in range(len(secret_word)):
+        if secret_word[i] in correct_letters:
+            blanks = blanks[:i] + secret_word[i] + blanks[i+1:]
+    for letter in blanks:
+        print(letter, end='')
+    print()
+
+
 def get_guess(already_guessed):
     """
     Validation of user input
@@ -57,7 +76,8 @@ def get_guess(already_guessed):
     ask fo correct input
     """
     while True:
-        guess = input('Please enter a letter: ').strip().lower()
+        print('Please enter a letter: ')
+        guess = input().strip().lower()
         if len(guess) != 1:
             print('Please enter a single letter!')
         elif guess in already_guessed:
@@ -84,7 +104,7 @@ def loop_letters(lives_left, word_in_play):
             print(f'{guess} is incorrect. You have {lives_left} attempts left')
 
         letters_guessed = ""
-        letters_guessed = letters_guessed + guess
+        letters_guessed += guess
         num = len(word_in_play)
 
         for guess in range(0, num):
@@ -98,15 +118,18 @@ def loop_letters(lives_left, word_in_play):
         print('')
 
         if letters_guessed == word_in_play:
-            print(f'Congratulations you guessed all the letters of the word {word_in_play}!')
+            print('Congratulations you guessed all the letters,')
+            print(f'of the word {word_in_play}')
             break
     else:
-        print(f"Unfortnuately you didn't guess the correct letters of the word {word_in_play}")
+        print("Unfortnuately you didn't guess the correct,")
+        print(f'letters of the word {word_in_play}')
 
 
 start_game()
 missed_letters = ''
 correct_letters = ''
-generated_word = pick_random_word(whateverword)
-number_of_lives_left = calculate_max_turns(generated_word)
-loop_letters(number_of_lives_left, generated_word)
+secret_word = pick_random_word(whateverword)
+game_is_finished = False
+number_of_lives_left = calculate_max_turns(secret_word)
+
