@@ -6,7 +6,6 @@ tprint('mikaela')
 
 whateverword = ['furthermore', 'copying', 'periodic', 'mental']
 
-letters_guessed = ""
 
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to
@@ -16,23 +15,21 @@ print('The computer will generate a random word.')
 print('The number of times you have to guess the letters of that word,')
 print('depends on the number of letters in that random word.')
 print('You get 2 extra attempts with each word.')
-user_input = input('Do you wish to start? Press y for yes or n for no: \n')
 
 
-def start_game(value_input):
+def start_game():
     """
     check if input is y or n
     """
-    value_input = user_input
     while True:
-        try:
-            value_input == ('y') or value_input == ('n')
-        except ValueError as e:
-            print(f'{e} is not correct, please try again\n')
-            continue
-        else:
+        user_input = input('Do you wish to start? Press y for yes or n for no: ')
+        if user_input == ('y'):
             break
-    return value_input
+        elif user_input == ('n'):
+            print('Okey, have a nice day!\n')
+        else:
+            print(f'{user_input} is not correct, please try again\n')
+    return user_input
 
 
 def pick_random_word(randomword):
@@ -58,21 +55,37 @@ def calculate_max_turns(word):
 def loop_letters(lives_left, word_in_play):
     """
     Looping through the word
-    according to the number of lives left
+    according to the number of lives left.
+    When lives_left == 0 or all letters are
+    found the loop will break
     """
     while lives_left > 0:
         guess = input('Please enter a letter: ')
         if guess in word_in_play:
             print(f'{guess} is in the random word')
-            break
         else:
             lives_left -= 1
             print(f'{guess} is incorrect. You have {lives_left} attempts left')
+
+        letters_guessed = ""
+        letters_guessed = letters_guessed + guess
+
+        for guess in word_in_play:
+            if guess in word_in_play:
+                print(f'{guess}', end='')
+            else:
+                print('_', end='')
+                lives_left += 1
+        print('')
+
+        if letters_guessed == word_in_play:
+            print(f'Congratulations you guessed all the letters of the word {word_in_play}!')
             break
+    else:
+        print(f"Unfortnuately you didn't guess the correct letters of the word {word_in_play}")
 
 
-start_game_command = start_game(user_input)
+start_game_command = start_game()
 generated_word = pick_random_word(whateverword)
-print(generated_word)
 number_of_lives_left = calculate_max_turns(generated_word)
 loop_letters(number_of_lives_left, generated_word)
