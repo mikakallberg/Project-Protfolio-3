@@ -1,7 +1,7 @@
 # Build a Bear
-
+This project is not done, but submitted so I don't miss deadline.
 # Navigation Through Content
-* [Deployed page]()<---- link to deployed app goes here
+* [Deployed page]()<---- link to deployed app goes here(Project is not deployed, link doesn't exist)
 * [Project Purpose](#project-purpose)
     - [Learning Outcomes](#learning-outcomes)
     - [Project Requirements](#project-requirements)
@@ -35,7 +35,7 @@ Taken from Assessment Handbook provided by Code Institute.
 - Use library software for building a graphical user interface, or command-line interface, or web application, or mathematical softaware
 - implement a data model, application features and business logic to manage, query and manipulate data to meet given needs in a particular real-world domain
 - Demonstrate and document the development process through a version control system such as GitHub
-- Deploy a command-line application to a cloud-based platform ([Buil a Bear]())<----- don't forget to put in link
+- Deploy a command-line application to a cloud-based platform ([Buil a Bear]())<----- There is no link.
 
 ### Project requirements
 Taken from Assessment Handbook provided by Code Institute or derived therefrom.
@@ -74,15 +74,60 @@ Initial Plan page 1.                                 | Initial Plan page 2
 
 # User Experience (UX)
 ## Demographics
+The demographic is everyone from child to adult, that want to play a more upbuilding version of the hangman game
 ## User Goal
+To have a bit of a challenge while passing the time.
 
 # Game Content
 ## Features
+
 ### Existing features
-- 
+- The user initiates the game by choice.
+- The code checks to see if the users input is correct.
+
+![Start Game](assets/images/start_game.png)
+
+- The code is then written to pcik a random word from an array, but this function might be surplus at this moment. I unfortnuately have run out of time to test.
+
+![Pick a random word](assets/images/pick_random_word.png)
+
+- from the random word the function calculate_max_turns gives the number of guesses a user has.
+
+![Calculate guesses](assets/images/calculate_max_turns.png)
 - 
 
 ### Features left to implement
+- In display_board the code should:
+    - display the letters that the user already guessed, so they dont guess the same letter over and over again.
+    - display a placeholder for correct letters in the form of a underscore.
+    - display the correct letter in the correct place after the user has guessed it.
+    - all of this is to give as much feedback to the user without crowding.
+
+    ![Display board](assets/images/display_board.png)
+
+- in the function loop_letters the code should:
+    - loope through all the letters as long as the lives_left is higher then 0
+    - or until the user has guessed all letters correctly
+    - it also checkes the user input so the user only gives on letter at a time, a value that is a letter in the english alphabet
+    -  feedback should be given adequetly, so the user knows where they can go next.
+    - A feature that's in the planning but not written in code is the option for the user to quit the game at any point in the game.
+
+    ![Loop through](assets/images/loop_letters.png)
+
+    - At the bottom of the code, the while loop checks if the user guessed the all of the correct letters.
+
+    - If the user manages to guess all the letters an ASCII art image of a bear should appear together with the congratulatory message.
+
+    ![The Bear](assets/images/bear.png)
+
+    - If the user doesn't guess all the letters they should get a message saying that they unfortunately didn't get all the letters.
+
+    ![Putting together the guesses](assets/images/putting_together.png)
+
+    - At the very end the user should be asked if they want to play again.
+
+    ![Play again](assets/images/play_again.png)
+
 
 # Technologies and Libraries used
 
@@ -102,10 +147,13 @@ Initial Plan page 1.                                 | Initial Plan page 2
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 
     File provided in it's entirity by Code Institute.
-
+### APIs
+- For the randomly generated word the API Random-Word 1.0.7 is used https://pypi.org/project/Random-Word/
+- For the image of the bear ASCII Art Archive https://www.asciiart.eu/animals/bears with special credit to Joan G. Stark was used.
 
 # Testing
 ### Validator testing
+No validator testing has been done.
 ### Other testing done
 - Continual testing done through the TDD method described in "The Clean Coder- A Code of Conduct for Professional Programmers" by Robert C. Martin
 ![TDD Testing example](assets/images/tdd_testing_nr1.png)
@@ -114,17 +162,30 @@ Initial Plan page 1.                                 | Initial Plan page 2
 - First bug showed it's lovely little head at the first function. Had both ValueError and TypeError. The problem was related to calling import random. I tried scaling my code back to the raw basic. Fixed by following https://www.w3schools.com/python/ref_random_choice.asp and discussing it with my mentor.
 
 - A bug in the pick_random_word function, counted the number of objects in a list, not the umber of letters in the word. I had put randomword instead of word_at_play in the len() method. 
+ 
+ - Then there was a lot of bugs, the code didn't get underscores as placeholders, it couldn't restart the game on users request, it couldn't communicate between functions. 
+    - I googled and tried various fixes
+    - I talked to tutor support
+    - I talked to my mentor
 
 ### Unfixed bugs
+- I don't know if the random word works.
+- It bugs out in loop letters function, where even though you enter a letter you never entered before it tells you you've already used it. And you get stuck in a loop.
+- The underscore placeholders don't work.
+- The game doesn't restart on user request.
 
 # Deployment
+
+The project is not deployed
 ### Checklist:
-Put picture of checklist here when done.
+- to keep track fo what to do and improvements on the initial plan, I use a checklist. Since this project isn't working, the list is incomplete.
+
+![Checklist](assets/images/checklist.jpg)
 
 # Credits
 
 ### Content
-- start_game variable was heavely inspired by code from https://www.codegrepper.com/code-examples/python/how+to+make+a+yes+or+no+question+in+python
+- start_game variable was inspired by code from https://www.codegrepper.com/code-examples/python/how+to+make+a+yes+or+no+question+in+python
 ### Media
 - For how to make the nav-bar https://github.com/artkonekt/menu/blob/master/README.md was used.
 - As template for README https://github.com/mikakallberg/readme-template/blob/master/README.md was used
@@ -134,3 +195,5 @@ Put picture of checklist here when done.
      - [CBT Nuggets](https://www.youtube.com/watch?v=JNXmCOumNw0)
      - [iCode](https://icodemag.com/creating-a-simple-hangman-game-in-python/)
 - For how to put pictures next to one another [EpicDavi and Prince](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md)
+- Resource for a random generated word https://pypi.org/project/Random-Word/
+- resource for the Bear image https://www.asciiart.eu/animals/bears. Special credit to Joan G. Stark

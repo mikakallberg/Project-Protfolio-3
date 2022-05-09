@@ -1,10 +1,13 @@
 # Use limited array first to get code working
 import random
+import request
 from art import *
+from rand_word import RandomWords
 
-tprint('mikaela')
 
-whateverword = ['furthermore', 'copying', 'periodic', 'mental']
+#Return a single random word
+r.get_random_word()
+whateverword = get_random_word
 
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to
@@ -22,7 +25,7 @@ def start_game():
     """
     while True:
         print('Do you wish to start?')
-        user_input = input('Press y for yes or n for no:')
+        user_input = input('Press y for yes or n for no:\n')
         if user_input == ('y'):
             break
         elif user_input == ('n'):
@@ -57,9 +60,9 @@ def display_board(missed_letters, correct_letters, secret_word):
     
     num = '_' * len(secret_word)
 
-    for guess in range(0, num):
-        if secret_word[guess] in correct_letters:
-            print(secret_word[guess], end=' ')
+    for i in range(secret_word):
+        if secret_word[i] in correct_letters:
+            num = num[:i] + secret_word[i] + num[i + 1:]
         elif secret_word[guess] == '':
             print('', end='')
         else:
@@ -79,7 +82,7 @@ def loop_letters(lives_left, word_in_play):
     letters_guessed += guess
 
     while lives_left > 0:
-        input('Please enter a letter: ')
+        input('Please enter a letter: \n')
         guess = input().strip().lower()
         if len(guess) != 1:
             print('You only have to guess one letter!')
@@ -116,8 +119,9 @@ while True:
                 found_all_letters = False
                 break
         if found_all_letters:
-            print('Congratulations you guessed all the letters')
+            print('Congratulations you built the bear')
             print(f'of the word {secret_word}!')
+            print(bear)
             game_is_finished = True
     else:
         missed_letters += guess
@@ -138,3 +142,31 @@ while True:
             number_of_lives_left = calculate_max_turns(secret_word)
         else:
             exit()
+
+
+bear = (
+    Art by Joan G. Stark
+                  _         _
+ .-""-.          ( )-"```"-( )          .-""-.
+/ O O  \          /         \          /  O O \
+|O .-.  \        /   0 _ 0   \        /  .-. O|
+\ (   )  '.    _|     (_)     |     .'  (   ) /
+ '.`-'     '-./ |             |`\.-'     '-'.'
+   \         |  \   \     /   /  |         /
+    \        \   '.  '._.'  .'   /        /
+     \        '.   `'-----'`   .'        /
+      \   .'    '-._        .-'\   '.   /
+       |/`          `'''''')    )    `\|
+       /                  (    (      ,\
+      ;                    \    '-..-'/ ;
+      |                     '.       /  |
+      |                       `'---'`   |
+      ;                                 ;
+       \                               /
+        `.                           .'
+          '-._                   _.-'
+    jgs    __/`"  '  - - -  ' "`` \__
+         /`            /^\           `\
+         \(          .'   '.         )/
+          '.(__(__.-'       '.__)__).'
+)
