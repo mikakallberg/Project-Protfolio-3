@@ -157,6 +157,39 @@ No validator testing has been done.
 ### Other testing done
 - Continual testing done through the TDD method described in "The Clean Coder- A Code of Conduct for Professional Programmers" by Robert C. Martin
 ![TDD Testing example](assets/images/tdd_testing_nr1.png)
+#
+### Testing through development
+- Add function to select random word, the program picks a random word from an array of words listed.
+    - Tested multiple ways and the program picks a different word out of the four in the array named random_word.
+- Add function asking the user to press y to start and n to not start.
+    - Ensured functionality
+    - Have not added functionality for if user presses another key than 'y' or 'n'.
+- Ensure program goes through start_game over to pick_randome_word.
+- Add function which depending on the word that the program selects, the program calculates the number of letters in that word and displays that number in a print statement.
+  - Ensured functionality with serveral words.
+  - Add two guesses to every word. Tested with several words.
+- Adding initial rules as print-statements
+    - The print statements show before every game.
+- Testing after getting project back from assessment and solving bug that appeared begore intial submission: 
+  - tested basic game function. If the user follows instructions.
+  - tested functions even if user doesn't follow instructions see images below:
+  #
+     Test start of game                               | Test to calculate correct numbers from the selected word
+    :-----------------------------------------------: | :----------------------------------------------------------:
+     ![Start Game](/assets/images/test_start_game.png)| ![Letters in word](assets/images/test_letters_in_word.png)
+    
+     Test to only accept inputs from alphabet         |  Test to only accept inputs from alphabet
+    :-----------------------------------------------: | :----------------------------------------------------------:
+     ![User input](assets/images/test_user_input1.png)| ![User input](assets/images/test_user_input2.png)
+    
+     Test input at the end of game                    | Test input to continue another game
+    :-----------------------------------------------: | :----------------------------------------------------------:
+     ![End game](assets/images/test_end_game.png)     |  ![]()
+  #
+  - 
+  - 
+  - 
+  - 
 ## Bugs
 ### Bugs through the creation process
 - First bug showed it's lovely little head at the first function. Had both ValueError and TypeError. The problem was related to calling import random. I tried scaling my code back to the raw basic. Fixed by following https://www.w3schools.com/python/ref_random_choice.asp and discussing it with my mentor.
@@ -167,6 +200,7 @@ No validator testing has been done.
     - I googled and tried various fixes
     - I talked to tutor support
     - I talked to my mentor
+- -Solution, missing len() method in display_board function. Functionality ensured.
 
 ### Unfixed bugs
 - I don't know if the random word works.
