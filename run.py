@@ -1,13 +1,12 @@
 # Use limited array first to get code working
 import random
-import request
-from art import *
-from rand_word import RandomWords
+# import request
+# from rand_word import RandomWords
 
 
-#Return a single random word
-r.get_random_word()
-whateverword = get_random_word
+# Return a single random word
+# r.get_random_word()
+random_word = ['furthermore', 'copying', 'periodic', 'mental']
 
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to
@@ -30,6 +29,7 @@ def start_game():
             break
         elif user_input == ('n'):
             print('Okey, have a nice day!\n')
+            exit()
         else:
             print(f'{user_input} is not correct, please try again\n')
     return
@@ -39,8 +39,7 @@ def pick_random_word(randomword):
     """
     Selects a random word from source
     """
-    word_in_play = random.choice(randomword)
-    return word_in_play
+    return random.choice(randomword)
 
 
 def calculate_max_turns(word):
@@ -57,17 +56,31 @@ def display_board(missed_letters, correct_letters, secret_word):
     for letter in missed_letters:
         print(letter, end=' ')
         print()
-    
-    num = '_' * len(secret_word)
 
-    for i in range(secret_word):
-        if secret_word[i] in correct_letters:
-            num = num[:i] + secret_word[i] + num[i + 1:]
-        elif secret_word[guess] == '':
-            print('', end='')
+    blanks = '_' * len(secret_word)
+
+    for letters in range(len(secret_word)):
+        if secret_word[letters] in correct_letters:
+            blanks = blanks[
+                :letters] + secret_word[letters] + blanks[letters + 1:]
+
+    for letter in blanks:
+        print(letter, end='')
+    print()
+
+
+def get_guess(already_guessed):
+    while True:
+        print('Guess a letter')
+        guess = input().strip().lower()
+        if len(guess) != 1:
+            print('Input a single letter')
+        elif guess in already_guessed:
+            print('You have already guessed that letter!')
+        elif guess not in 'abcdefghijjklmnopqrstuvwxyz':
+            print('Only enter letters in the aplhabet please!')
         else:
-            print('_', end=' ')
-    print('')
+            return guess
 
 
 def loop_letters(lives_left, word_in_play):
@@ -77,51 +90,60 @@ def loop_letters(lives_left, word_in_play):
     When lives_left == 0 or all letters are
     found the loop will break
     """
-    guess = secret_word
-    letters_guessed = ""
-    letters_guessed += guess
-
     while lives_left > 0:
-        input('Please enter a letter: \n')
-        guess = input().strip().lower()
-        if len(guess) != 1:
-            print('You only have to guess one letter!')
-        elif guess in letters_guessed:
-            print(f'You have already used {guess}!')
-        elif guess not in 'abcdefghijklmnopqrstuvwxyz':
-            print('Please enter a value that is a letter')
-        elif guess in word_in_play:
+        guess = input('Please enter a letter: ')
+        # need validation first
+        if guess in word_in_play:
             print(f'{guess} is in the random word')
-            return guess
         else:
             lives_left -= 1
             print(f'{guess} is incorrect. You have {lives_left} attempts left')
 
 
+        letters_guessed = ""
+        letters_guessed += guess
+        num = len(word_in_play)
+
+        for guess in range(0, num):
+            print(word_in_play, guess)
+            if word_in_play[guess] == word_in_play:
+                print(word_in_play[guess], end='')
+            elif word_in_play[guess] == '':
+                print('', end='')
+            else:
+                print('-', end='')
+        print('')
+
+        if letters_guessed == word_in_play:
+            print(f'Congratulations, {word_in_play} is correct!')
+            break
+        else:
+            print(f"The correct word is {word_in_play}")
+
+
 start_game()
-game_is_finished = False
 missed_letters = ''
 correct_letters = ''
-secret_word = pick_random_word(whateverword)
+secret_word = pick_random_word(random_word)
+game_is_finished = False
 number_of_lives_left = calculate_max_turns(secret_word)
-loop_letters(number_of_lives_left, secret_word)
+
 
 while True:
     display_board(missed_letters, correct_letters, secret_word)
 
-    guess = loop_letters(missed_letters + correct_letters)
+    guess = get_guess(missed_letters + correct_letters)
 
     if guess in secret_word:
         correct_letters += guess
         found_all_letters = True
-        for i in range(len(secret_word)):
-            if secret_word[i] not in correct_letters:
+        for letters in range(len(secret_word)):
+            if secret_word[letters] not in correct_letters:
                 found_all_letters = False
                 break
         if found_all_letters:
             print('Congratulations you built the bear')
-            print(f'of the word {secret_word}!')
-            print(bear)
+            print(f'Congratulations, {secret_word} is the correct word!')
             game_is_finished = True
     else:
         missed_letters += guess
@@ -134,39 +156,9 @@ while True:
 
     if game_is_finished:
         if start_game():
-            start_game()
             missed_letters = ''
             correct_letters = ''
             game_is_finished = False
-            secret_word = pick_random_word(whateverword)
-            number_of_lives_left = calculate_max_turns(secret_word)
+            secret_word = pick_random_word(random_word)
         else:
             exit()
-
-
-bear = (
-    Art by Joan G. Stark
-                  _         _
- .-""-.          ( )-"```"-( )          .-""-.
-/ O O  \          /         \          /  O O \
-|O .-.  \        /   0 _ 0   \        /  .-. O|
-\ (   )  '.    _|     (_)     |     .'  (   ) /
- '.`-'     '-./ |             |`\.-'     '-'.'
-   \         |  \   \     /   /  |         /
-    \        \   '.  '._.'  .'   /        /
-     \        '.   `'-----'`   .'        /
-      \   .'    '-._        .-'\   '.   /
-       |/`          `'''''')    )    `\|
-       /                  (    (      ,\
-      ;                    \    '-..-'/ ;
-      |                     '.       /  |
-      |                       `'---'`   |
-      ;                                 ;
-       \                               /
-        `.                           .'
-          '-._                   _.-'
-    jgs    __/`"  '  - - -  ' "`` \__
-         /`            /^\           `\
-         \(          .'   '.         )/
-          '.(__(__.-'       '.__)__).'
-)
