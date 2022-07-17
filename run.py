@@ -127,7 +127,11 @@ while True:
         print('Do you wish to start the game again?')
         restart_input = input('Press y for yes or n for no:\n')
         if restart_input == ('y'):
+            secret_word = pick_random_word(random_word)
+            number_of_lives_left = calculate_max_turns(secret_word)
+            missed_letters = ''
+            correct_letters = ''
+            game_is_finished = False
             start_game()
-
         else:
             exit()

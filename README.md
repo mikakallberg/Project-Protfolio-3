@@ -184,7 +184,7 @@ No validator testing has been done.
     
      Test input at the end of game                    | Test input to continue another game
     :-----------------------------------------------: | :----------------------------------------------------------:
-     ![End game](assets/images/test_end_game.png)     |  ![]()
+     ![End game](assets/images/test_end_game.png)     |  ![Restart game](assets/images/restart_game.png)
   #
   - 
   - 
