@@ -124,10 +124,10 @@ while True:
             game_is_finished = True
 
     if game_is_finished:
-        if start_game():
-            missed_letters = ''
-            correct_letters = ''
-            game_is_finished = False
-            secret_word = pick_random_word(random_word)
+        print('Do you wish to start the game again?')
+        restart_input = input('Press y for yes or n for no:\n')
+        if restart_input == ('y'):
+            start_game()
+
         else:
             exit()
