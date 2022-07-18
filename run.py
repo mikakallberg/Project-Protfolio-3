@@ -1,13 +1,12 @@
 # Use limited array first to get code working
-import random
+# import random
 from art import *
 # import request
-# from rand_word import RandomWords
+from randword import word
 
 
 # Return a single random word
-# r.get_random_word()
-random_word = ['furthermore', 'copying', 'periodic', 'mental']
+random_word = word(min_word_len=4, max_word_len=5)
 
 
 # This variabel lets user initiate the game
@@ -37,11 +36,11 @@ def start_game():
     return
 
 
-def pick_random_word(randomword):
-    """
-    Selects a random word from source
-    """
-    return random.choice(randomword)
+# def pick_random_word(randomword):
+#     """
+#    Selects a random word from source
+#    """
+#    return random.choice(randomword)
 
 
 def calculate_max_turns(word):
@@ -88,7 +87,7 @@ def get_guess(already_guessed):
 start_game()
 missed_letters = ''
 correct_letters = ''
-secret_word = pick_random_word(random_word)
+secret_word = random_word
 game_is_finished = False
 number_of_lives = calculate_max_turns(secret_word)
 
@@ -134,7 +133,7 @@ while True:
         print('Do you wish to start the game again?')
         restart_input = input('Press y for yes or n for no:\n')
         if restart_input == ('y'):
-            secret_word = pick_random_word(random_word)
+            secret_word = random_word
             number_of_lives_left = calculate_max_turns(secret_word)
             missed_letters = ''
             correct_letters = ''
