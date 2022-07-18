@@ -1,3 +1,4 @@
+""" WordList file"""
 word = [
     'furthermore', 'copying', 'periodic', 'mental', 'ability',
     'able', 'about', 'above', 'accept', 'according', 'account',

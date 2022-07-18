@@ -1,10 +1,10 @@
-# Use limited array first to get code working
+""" Main file """
 import random
 from art import *
 from words import word
 
 
-# Return a single random word
+# Redefines the word list as random_word
 random_word = word
 
 
@@ -21,6 +21,9 @@ print('You get 2 extra attempts with each word.')
 def start_game():
     """
     check if input is y or n
+    if input is anything else
+    keeps asking for decision
+    between y or n
     """
     while True:
         print('Do you wish to start?')
@@ -37,7 +40,7 @@ def start_game():
 
 def pick_random_word(randomword):
     """
-    Selects a random word from source
+    Selects a random word from words-file
     """
     return random.choice(randomword)
 
@@ -45,6 +48,7 @@ def pick_random_word(randomword):
 def calculate_max_turns(word):
     """
     Calculates number turns
+    from random word
     """
     max_turns = (len(word)+2)
     print(f'You have {max_turns} guesses for this word!\n')
@@ -52,6 +56,7 @@ def calculate_max_turns(word):
 
 
 def display_board(missed_letters, correct_letters, secret_word):
+    """ How board should be displayed """
     print('Missed letters:\n', end=' ')
     for letter in missed_letters:
         print(letter, end=' ')
@@ -70,6 +75,10 @@ def display_board(missed_letters, correct_letters, secret_word):
 
 
 def get_guess(already_guessed):
+    """
+    checks user input against
+    parameteres
+    """
     while True:
         print('Please enter a letter: ')
         guess = input().strip().lower()
