@@ -1,5 +1,6 @@
 # Use limited array first to get code working
 import random
+from art import *
 # import request
 # from rand_word import RandomWords
 
@@ -7,6 +8,7 @@ import random
 # Return a single random word
 # r.get_random_word()
 random_word = ['furthermore', 'copying', 'periodic', 'mental']
+
 
 # This variabel lets user initiate the game
 # Credit for code structure (not a complete copy paste) to
@@ -88,7 +90,7 @@ missed_letters = ''
 correct_letters = ''
 secret_word = pick_random_word(random_word)
 game_is_finished = False
-number_of_lives_left = calculate_max_turns(secret_word)
+number_of_lives = calculate_max_turns(secret_word)
 
 
 while True:
@@ -98,12 +100,6 @@ while True:
 
     if guess in secret_word:
         print(f'{guess} is in the random word')
-    else:
-        number_of_lives_left -= 1
-        print(
-            f'{guess} is incorrect. {number_of_lives_left} left')
-
-    if guess in secret_word:
         correct_letters += guess
         found_all_letters = True
         for letters in range(len(secret_word)):
@@ -111,15 +107,26 @@ while True:
                 found_all_letters = False
                 break
         if found_all_letters:
-            print('Congratulations you built the bear')
-            print(f'Congratulations, {secret_word} is the correct word!')
+            print(art("stranger danger", number=2))
+            print('Congratulations you found all the letters in')
+            print(f'{secret_word}!')
+            print(art("stars2"))
+            print(art("stars", number=3))
+            print(art("stars2"))
             game_is_finished = True
     else:
         missed_letters += guess
-        if len(missed_letters) == number_of_lives_left:
+        increase_by = 1
+        lives_left = len(missed_letters) - increase_by
+        print(
+            f'{guess} is incorrect. You have used {lives_left} guesses')
+        if len(missed_letters) == number_of_lives:
             display_board(missed_letters, correct_letters, secret_word)
             print("Unfortnuately you didn't guess the correct")
             print('letters in the word.')
+            print(art("stars2"))
+            print(art("seal", number=5))
+            print(art("stars2"))
             print(f'The word was {secret_word}')
             game_is_finished = True
 
