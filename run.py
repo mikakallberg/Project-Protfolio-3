@@ -124,7 +124,7 @@ while True:
     else:
         missed_letters += guess
         increase_by = 1
-        lives_left = len(missed_letters) - increase_by
+        lives_left = (len(missed_letters)+1) - increase_by
         print(
             f'{guess} is incorrect. You have used {lives_left} guesses')
         if len(missed_letters) == number_of_lives:

@@ -229,5 +229,5 @@ The project is not deployed
      - [CBT Nuggets](https://www.youtube.com/watch?v=JNXmCOumNw0)
      - [iCode](https://icodemag.com/creating-a-simple-hangman-game-in-python/)
 - For how to put pictures next to one another [EpicDavi and Prince](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md)
-- Resource for a random generated word https://pypi.org/project/Random-Word/
-- resource for the Bear image https://www.asciiart.eu/animals/bears. Special credit to Joan G. Stark
+- Ascii art [GitHub adress](https://github.com/sepandhaghighi/art#overview), [PyPi adress](https://pypi.org/project/art/)
+- EF 1000 most common words in [English](https://www.ef.com/wwen/english-resources/english-vocabulary/top-1000-words/)
