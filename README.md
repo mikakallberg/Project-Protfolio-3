@@ -54,7 +54,7 @@ Taken from Assessment Handbook provided by Code Institute or derived therefrom.
 
 ### Lucid Chart
 
-![Lucid Chart](assets/images/lucidcart_build-a-bear.png)
+![Lucid Chart](assets/images/lucidchart_updated.png)
 
 ### Code Plan
 The text in these pictures are a mix of English and Swedish. As these are written out for me to understand and guide me. Resource used to place pictures side by side see [Media](#media)
