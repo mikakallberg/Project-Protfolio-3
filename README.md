@@ -1,7 +1,7 @@
 # Build a Bear
-This project is not done, but submitted so I don't miss deadline.
+
 # Navigation Through Content
-* [Deployed page]()<---- link to deployed app goes here(Project is not deployed, link doesn't exist)
+* [Deployed page](https://mikakallberg-build-a-bear.herokuapp.com/)
 * [Project Purpose](#project-purpose)
     - [Learning Outcomes](#learning-outcomes)
     - [Project Requirements](#project-requirements)
@@ -187,15 +187,49 @@ Initial Plan page 1.                                 | Initial Plan page 2
     - move code in if statement down inside while-loops if guess if correct.
 
 ### Unfixed bugs
-- 
+- 'from art impost *' used; unable to detect undefined names. 
+   - then seven 'art' may be undefined, or defined from start imports:art
+   - since the latter is correct and instructions from API developers have been used, this error I can't make go away. However the code passes through PEP8 without issues, see [Validator testing](#validator-testing).
 
 # Deployment
+### First Deployment
+- Following the "Love Sandwhiches walkthru project" when it comes to deployment
+- In Heroku Create a new app by:
+   - In front view- press New->Create new app
+   - Choose a unique app name, that conforms to heroku naming standard and choose region (Europe). Press Create app
+   - Attache Heroku Postgres as DATABASE, under Resources
+   - Under Settings-> Config vars: 
+        - add PORT 8000
+   - During the initial creation of this project Heroku had servered the possibility to doply directly from GitHub. So deployment had to be done directly from GitPod. 
+       - From terminal use command heroku login -i, an MFA was not in use at the time.
+       - Log in to Heroku using login credentials
+       - Search for app name in Heroku by using command heroku apps and get the app "mikakallberg-build-a-bear"
+       - Enter the following command in the terminal: heroku git:remote -a mikakallberg-build-a-bear
+       - Enter git add . && git commit -m "Deploy to Heroku via CLI"
+       - Push to both GitHub and Heroku
+       - Enter the following command in the terminal: git push origin main
+       - Enter the following command in the terminal: git push heroku main
+### Final Deployment:
+- For the final deployment the security threat within Github had resolved and connection between the two entites had been reestablished.
+    - In GitPod:
+        - Since a connection had already been established between gitpod and Heroku, although the code at the time didn't work. The only thing that needed to be done in GitPod was to commit to GitHub
+    - In Heroku:
+        - In Deploy -> establish connection between repository in GitHub and app in Heroku, by choosing HitHub as deploy method.
+        - Deploy manually
+        - Ensure deployment is successfull with all functionality and style.
+        - set future deploys to automatic.
+    - Link to deployed app in Heroku [Build a Bear](https://mikakallberg-build-a-bear.herokuapp.com/)
 
-The project is not deployed
 ### Checklist:
-- to keep track fo what to do and improvements on the initial plan, I use a checklist. Since this project isn't working, the list is incomplete.
+- to keep track of what to do and improvements on the initial plan, a  checklist and a paper version of the Assessment criteria is used.
+#
+  Checklist nr.1
 
-![Checklist](assets/images/checklist.jpg)
+![Checklist](assets/images/checklist1.jpeg)
+#
+  Checklist nr.2 
+
+![Checklist 2](assets/images/checklist2.jpeg)
 
 # Credits
 ## Thank you

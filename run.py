@@ -151,4 +151,4 @@ while True:
             print('Okey, have a nice day!\n')
             exit()
         else:
-            print(f'{user_input} is not correct, please try again\n')
+            print(f'{restart_input} is not correct, please try again\n')
