@@ -63,7 +63,7 @@
   ![End game](assets/images/test_end_game.png)     |  ![Restart game](assets/images/test_restart_game.png)
 #
 ### Testing after development
-- See [Cheklist nr.2](#checklist) for a list of testing done after deploment. For images see below:
+- See [Checklist nr.2](/README.md#checklist) for a list of testing done after deploment. For images see below:
 
   - Initial View
 #
