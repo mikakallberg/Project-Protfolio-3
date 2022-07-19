@@ -36,7 +36,7 @@ Taken from Assessment Handbook provided by Code Institute.
 - Use library software for building a graphical user interface, or command-line interface, or web application, or mathematical softaware
 - implement a data model, application features and business logic to manage, query and manipulate data to meet given needs in a particular real-world domain
 - Demonstrate and document the development process through a version control system such as GitHub
-- Deploy a command-line application to a cloud-based platform ([Buil a Bear]())<----- There is no link.
+- Deploy a command-line application to a cloud-based platform ([Heroku](https://mikakallberg-build-a-bear.herokuapp.com/)
 #
 ### Project requirements
 Taken from Assessment Handbook provided by Code Institute or derived therefrom.
@@ -67,6 +67,7 @@ Initial Plan page 1.                                 | Initial Plan page 2
 - [Level Up Coding](https://levelup.gitconnected.com/python-can-be-lots-of-fun-999552d69d21)
 - [The Python Programmer](https://www.youtube.com/watch?v=xS_EaSD_WGA)
 - [Welcome to dinosay](https://matteoguadrini.github.io/dinosay/)
+- [ASCII Art Library for Python](https://pypi.org/project/art/)
 - [ASCII Art Archive](https://www.asciiart.eu/animals/bears)
 - [The Grimes Teacher](https://www.youtube.com/watch?v=arcFqEuV_XQ)
 
@@ -147,11 +148,12 @@ Initial Plan page 1.                                 | Initial Plan page 2
     - I talked to tutor support
     - I talked to my mentor
     - Solution, missing len() method in display_board function. Functionality ensured.
-- Bug where lives_left didn't come through visually to comuunicate with the user.
+- Bug where lives_left didn't come through visually to communicate with the user.
     - Solution: using missed letters with len()-argument to calculate how many wrong missaed letters the user has, inside the else-statement.
     - print guess and number of attempts together in a respons to user.
 - Bug respons to user if letters is in secret_word doesn't show.
     - move code in if statement down inside while-loops if guess if correct.
+    -Remove loop_letters, surplus code.
 
 ### Unfixed bugs
 - 'from art impost *' used; unable to detect undefined names. 
