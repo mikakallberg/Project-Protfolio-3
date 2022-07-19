@@ -198,15 +198,12 @@ Initial Plan page 1.                                 | Initial Plan page 2
     - Link to deployed app in Heroku [Build a Bear](https://mikakallberg-build-a-bear.herokuapp.com/)
 
 ### Checklist:
-- to keep track of what to do and improvements on the initial plan, a  checklist and a paper version of the Assessment criteria is used.
+- to keep track of what to do and improvements on the initial plan, a checklist and a paper version of the Assessment criteria is used.
 #
-  Checklist nr.1
+  Checklist
 
 ![Checklist](assets/images/checklist1.jpeg)
-#
-  Checklist nr.2 
 
-![Checklist 2](assets/images/checklist2.jpeg)
 
 # Credits
 ## Thank you
