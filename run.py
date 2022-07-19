@@ -147,7 +147,7 @@ while True:
             correct_letters = ''
             game_is_finished = False
             start_game()
-        elif user_input == ('n'):
+        elif restart_input == ('n'):
             print('Okey, have a nice day!\n')
             exit()
         else:
