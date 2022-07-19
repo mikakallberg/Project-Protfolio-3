@@ -108,6 +108,14 @@ Initial Plan page 1.                                 | Initial Plan page 2
    - if the Site User chooses n for no a message saying "Okey, have a nice day!" appears.
    - if the Site User chooses y for yes a new game starts from scratch.
 
+### Success Decoration
+- Stealth fighter is not used
+
+![Stars](assets/images/stars_stars2_stranger_danger.png)
+
+![Seal](assets/images/seal.png)
+
+
 
 ### Future features
 - Instead of using a uniqe wordlist, a random word API could be implemented when more time is available.
