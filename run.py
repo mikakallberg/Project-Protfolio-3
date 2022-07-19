@@ -148,4 +148,5 @@ while True:
             game_is_finished = False
             start_game()
         else:
+            print('Okey, have a nice day!\n')
             exit()
