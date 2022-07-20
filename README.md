@@ -44,14 +44,14 @@ Taken from Assessment Handbook provided by Code Institute.
 ### Project requirements
 Taken from Assessment Handbook provided by Code Institute or derived therefrom.
 - Required langauge: [Python](https://www.python.org/doc/essays/blurb/) 
-- Using APIs and library software [Wikipedia](https://en.wikipedia.org/wiki/API)
+- Using APIs and library software [ASCII Art Library for Python](https://pypi.org/project/art/)
 - Deploy to a cloud-based platform [Heroku](https://www.heroku.com/home)
 
 # Initial planning
 ### History of the Hang Man Game
 [Hangman(game) Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game))
 - I was not able to finding who first started using the hangman game in a programming langauge. But in every resource checked it was reffered to as a classic.
-- The outside of prgramming history of Hangman wasa little bit easier to find. According to Wikipedia the origins ar unknown, but a variant of the game is mentioned in a book of children's games from 1894 assembled by Alice Gomme, the book is called "Birds, Beasts, and Fishes". Please feel free to read the article in the link provided above for more information.
+- Outside of programming the history of Hangman was a little bit easier to find. According to Wikipedia the origins are unknown, but a variant of the game is mentioned in a book of children's games from 1894 assembled by Alice Gomme, the book is called "Birds, Beasts, and Fishes". Please feel free to read the article in the link provided above for more information.
 - [References](#media)
 #
 ### Lucid Chart
