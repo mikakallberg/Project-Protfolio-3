@@ -167,6 +167,7 @@ Initial Plan page 1.                                 | Initial Plan page 2
     -Remove loop_letters, surplus code.
 - Bug when user inputs capital Y instead of lowercase y, the program throws an error, that the insert is not defined. 
    - Solution put a lower()-method after input to make all inputs lowercase no matter if the user gives lowercase or uppercase input.
+   - Fix tested in deployed version on Heroku.
 
 ### Unfixed bugs
 - 'from art impost *' used; unable to detect undefined names. 
