@@ -27,7 +27,7 @@ def start_game():
     """
     while True:
         print('Do you wish to start?')
-        user_input = input.lower('Press y for yes or n for no:\n')
+        user_input = input('Press y for yes or n for no:\n').lower()
         if user_input == ('y'):
             break
         elif user_input == ('n'):
@@ -139,7 +139,7 @@ while True:
 
     if game_is_finished:
         print('Do you wish to start the game again?')
-        restart_input = input.lower('Press y for yes or n for no:\n')
+        restart_input = input('Press y for yes or n for no:\n').lower()
         if restart_input == ('y'):
             secret_word = pick_random_word(random_word)
             number_of_lives_left = calculate_max_turns(secret_word)

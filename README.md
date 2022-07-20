@@ -165,6 +165,8 @@ Initial Plan page 1.                                 | Initial Plan page 2
 - Bug respons to user if letters is in secret_word doesn't show.
     - move code in if statement down inside while-loops if guess if correct.
     -Remove loop_letters, surplus code.
+- Bug when user inputs capital Y instead of lowercase y, the program throws an error, that the insert is not defined. 
+   - Solution put a lower()-method after input to make all inputs lowercase no matter if the user gives lowercase or uppercase input.
 
 ### Unfixed bugs
 - 'from art impost *' used; unable to detect undefined names. 
